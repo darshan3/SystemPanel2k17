@@ -76,13 +76,13 @@ class UserProfile(models.Model):
                                      choices=YEAR_CHOICES)
 
     def __str__(self):
-        return self.name
+        return self.mi_number
 
     def set_mi_number(self, no):
         self.mi_number = no
 
     def getName(self):
-        return self.name
+        return self.mi_number
 
 
 class Group(models.Model):
