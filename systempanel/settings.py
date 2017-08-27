@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'proshows.apps.ProshowsConfig',
     'workshops.apps.WorkshopsConfig',
     'events.apps.EventsConfig',
+    'livewire.apps.LivewireConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

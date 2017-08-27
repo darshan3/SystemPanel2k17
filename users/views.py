@@ -72,8 +72,7 @@ class createuser(APIView):
         name = info['name']
         beg = giveFirstThree(name)
         beg = "MI-" + beg + "-"
-        already_there = len(UserProfile.objects.filter(mi_number__startswith=beg).order_by('-mi_number')
-)
+        already_there = len(UserProfile.objects.filter(mi_number__startswith=beg).order_by('-mi_number'))
         if already_there == 0:
             end = "101"
         else:

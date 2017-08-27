@@ -25,8 +25,8 @@ class GroupAdmin(admin.ModelAdmin):
     list_display = ('name', 'mobile_number',
                     'present_college', 'present_city', 'event')
     list_filter = ['event',
-                   'present_city',
-                   'present_college']
+                   'present_city__city_name',
+                   'present_college__college_name']
     search_fields = ['name']
     exclude = ("members",)
 
