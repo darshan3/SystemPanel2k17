@@ -3,14 +3,14 @@ from competitions.models import CompetitionsEvent
 
 
 class City(models.Model):
-    city_name = models.CharField(max_length=20)
+    city_name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.city_name
 
 
 class College(models.Model):
-    college_name = models.CharField(max_length=50)
+    college_name = models.CharField(max_length=300)
     located_city = models.ForeignKey(City, on_delete=models.CASCADE)
 
     def __str__(self):
