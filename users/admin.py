@@ -22,7 +22,7 @@ class GroupAdmin(admin.ModelAdmin):
     inlines = (
         MembersInline,
     )
-    list_display = ('name', 'mobile_number',
+    list_display = ('__str__', 'name', 'get_mail', 'mobile_number',
                     'present_college', 'present_city', 'event')
     list_filter = ['event',
                    'present_city__city_name',

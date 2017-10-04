@@ -101,5 +101,13 @@ class Group(models.Model):
     members = models.ManyToManyField(UserProfile,
                                      blank=True)
 
+    class Meta:
+        ordering = ['-id']
+
     def __str__(self):
         return self.members.all()[0].name
+
+    def get_mail(self):
+        return self.members.get(mi_number=self.name).email
+    get_mail.short_description = 'Email'
+    get_mail.admin_order_field = 'name'
