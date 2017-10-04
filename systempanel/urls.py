@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^', include('users.urls')),
     url(r'^', include('news.urls')),
     url(r'^', include('livewire.urls')),
+    url(r'^', include('cl.urls')),
 ]
